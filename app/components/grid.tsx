@@ -29,6 +29,10 @@ export default function Grid() {
       path: "",
       name: "michael scott",
     },
+    {
+      path: "",
+      name: "michael scott",
+    },
   ];
   return (
     <>
