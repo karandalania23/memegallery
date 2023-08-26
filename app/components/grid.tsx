@@ -1,37 +1,38 @@
 'use client'
 import React from "react";
+import Image from "next/image";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 export default function Grid() {
   const notify = () => toast("Thanks for Submitting!");
   const data = [
     {
-      path: "",
-      name: "michael scott",
+      path: "/assets/img1.jpeg",
+      name: "Author 1",
     },
     {
-      path: "",
-      name: "michael scott",
+      path: "/assets/img2.jpeg",
+      name: "Author 2",
     },
     {
-      path: "",
-      name: "michael scott",
+      path: "/assets/img3.jpeg",
+      name: "Author 3",
     },
     {
-      path: "",
-      name: "michael scott",
+      path: "/assets/img4.jpeg",
+      name: "Author 4",
     },
     {
-      path: "",
-      name: "michael scott",
+      path: "/assets/img5.jpeg",
+      name: "Author 5",
     },
     {
-      path: "",
-      name: "michael scott",
+      path: "/assets/img6.jpeg",
+      name: "Author 6",
     },
     {
-      path: "",
-      name: "michael scott",
+      path: "/assets/img7.jpeg",
+      name: "Author 7",
     },
   ];
   return (
@@ -109,7 +110,9 @@ export default function Grid() {
           </div>
           {data.map((info) => (
             <div>
-              <div className="w-full h-60 bg-gray-300 rounded-lg"></div>
+              <div className="w-full h-64 bg-gray-300 rounded-lg">
+                <Image src={info.path} className="h-64 w-full rounded-lg" height={500} width={500} alt="image" />
+              </div>
               <div> {info.name} </div>
             </div>
           ))}
