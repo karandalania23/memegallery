@@ -1,3 +1,12 @@
+# Deployed Link -
+(https://memegallery.vercel.app/)
+
+# Tech-stack used -
+- Next.js
+- Tailwind css
+- App Directory
+- Typescript
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
