@@ -5,7 +5,7 @@ import { Montserrat } from 'next/font/google'
 const inter = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Meme Gallery',
+  title: 'MemeHub',
 }
 
 export default function RootLayout({

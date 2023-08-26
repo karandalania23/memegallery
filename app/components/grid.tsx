@@ -1,6 +1,9 @@
+'use client'
 import React from "react";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Grid() {
+  const notify = () => toast("Thanks for Submitting!");
   const data = [
     {
       path: "",
@@ -29,7 +32,7 @@ export default function Grid() {
   ];
   return (
     <>
-      <div className="text-white pt-32">
+      <div className="text-white pt-28">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6">
           <div className=" row-span-2">
             <div className="w-full h-full bg-[#292727] text-[#eeeeee] rounded-lg">
@@ -62,7 +65,7 @@ export default function Grid() {
                 <div className="flex items-center justify-center w-full px-10 mt-2">
                   <label
                     htmlFor="dropzone-file"
-                    className="flex flex-col items-center justify-center w-full h-full border-2  border-dashed rounded-lg cursor-pointer  bg-[#454141]  border-gray-600 hover:border-gray-500 hover:bg-[#575151]"
+                    className="flex flex-col items-center justify-center w-full h-48 border-2  border-dashed rounded-lg cursor-pointer  bg-[#454141]  border-gray-600 hover:border-gray-500 hover:bg-[#575151]"
                   >
                     <div className="flex flex-col items-center justify-center pt-5 pb-6">
                       <svg
@@ -91,6 +94,12 @@ export default function Grid() {
                     <input id="dropzone-file" type="file" className="hidden" />
                   </label>
                 </div>
+                <div className="mt-6 flex justify-end px-10 pb-6">
+                <button type="submit" onClick={notify} className="text-white font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 ">Submit</button>
+                <ToastContainer />
+                </div>
+
+
               </form>
             </div>
           </div>
